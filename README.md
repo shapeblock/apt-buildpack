@@ -37,3 +37,9 @@ MIT
 ## Disclaimer
 
 This buildpack is experimental and not yet intended for production use.
+
+## How to build
+
+```
+pack buildpack package shapeblock/apt:0.3.0 --publish
+```
