@@ -155,9 +155,7 @@ else
   echo -n ":" > $apt_env_dir/PKG_CONFIG_PATH.delim
 fi
 
-echo "launch = true" > ${apt_layer}.toml
-echo "build = true" >> ${apt_layer}.toml
-echo "cache = true" >> ${apt_layer}.toml
+echo -e '[types]\ncache = true\nlaunch = true\nbuild = true' > ${apt_layer}.toml
 
 end_time=$(date +%s%N)
 echo "Elapsed time: $(( $(( $end_time - $start_time )) / 1000000 ))ms" | indent
