@@ -154,7 +154,7 @@ else
   echo -n "$pkg_config_path" > $apt_env_dir/PKG_CONFIG_PATH.prepend
   echo -n ":" > $apt_env_dir/PKG_CONFIG_PATH.delim
 fi
-
+ln -fs $apt_layer/opt/google/chrome/google-chrome $apt_layer/usr/bin/google-chrome
 echo -e '[types]\ncache = true\nlaunch = true\nbuild = true' > ${apt_layer}.toml
 
 end_time=$(date +%s%N)
